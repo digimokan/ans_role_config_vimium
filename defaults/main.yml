@@ -5,6 +5,21 @@ vimium_search_providers:
   - { provider_name: 'Google', hotkeys: 'g', search_url: 'https://www.google.com/search?hl=en&q=%s' }
   - { provider_name: 'Wikipedia', hotkeys: 'w', search_url: 'https://en.wikipedia.org/?search=%s' }
 
+# vimium settings version (updated somehow in upstream code...)
+settings_version: '1.66'
+
+# set smooth-scroll option
+smooth_scroll: true
+
+# scroll step size, in pixels
+scroll_step_size: '60'
+
+# grab back focus from browser
+grab_back_focus: true
+
+# characters used to label and follow links
+link_hint_chars: 'asdfghjkl'
+
 # vimium extension config file (see install limitations noted in config file)
 vimium_config_file_path: '/etc/chromium/ansible_vimium.json'
 
