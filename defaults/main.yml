@@ -1,10 +1,3 @@
-# List of browser search providers, along with their hotkeys and search strings
-# The first search provider in the list will be the default search provider
-vimium_search_providers:
-  - { provider_name: 'DuckDuckGo', hotkeys: 'd', search_url: 'https://duckduckgo.com/?q=%s' }
-  - { provider_name: 'Google', hotkeys: 'g', search_url: 'https://www.google.com/search?hl=en&q=%s' }
-  - { provider_name: 'Wikipedia', hotkeys: 'w', search_url: 'https://en.wikipedia.org/?search=%s' }
-
 # vimium settings version (updated somehow in upstream code...)
 settings_version: '1.66'
 
@@ -22,4 +15,43 @@ link_hint_chars: 'asdfghjkl'
 
 # vimium extension config file (see install limitations noted in config file)
 vimium_config_file_path: '/etc/chromium/ansible_vimium.json'
+
+# List of browser search providers, along with their hotkeys and search strings
+# The first search provider in the list will be the default search provider
+vimium_search_providers:
+  - { provider_name: 'DuckDuckGo', hotkeys: 'd', search_url: 'https://duckduckgo.com/?q=%s' }
+  - { provider_name: 'Google', hotkeys: 'g', search_url: 'https://www.google.com/search?hl=en&q=%s' }
+  - { provider_name: 'Wikipedia', hotkeys: 'w', search_url: 'https://en.wikipedia.org/?search=%s' }
+
+# keymaps used by Vimium extension
+vimium_keymaps:
+  - { keypress: 'j', action: 'scrollDown' }
+  - { keypress: 'k', action: 'scrollUp' }
+  - { keypress: 'gg', action: 'scrollToTop' }
+  - { keypress: 'G', action: 'scrollToBottom' }
+  - { keypress: 'H', action: 'scrollLeft' }
+  - { keypress: 'L', action: 'scrollRight' }
+  - { keypress: ',', action: 'previousTab' }
+  - { keypress: '.', action: 'nextTab' }
+  - { keypress: 'h', action: 'goBack' }
+  - { keypress: 'l', action: 'goForward' }
+  - { keypress: '[', action: 'goPrevious' }
+  - { keypress: ']', action: 'goNext' }
+  - { keypress: 'r', action: 'reload' }
+  - { keypress: 'o', action: 'Vomnibar.activate' }
+  - { keypress: 'O', action: 'Vomnibar.activateEditUrl' }
+  - { keypress: 't', action: 'Vomnibar.activateInNewTab' }
+  - { keypress: 'gu', action: 'goUp' }
+  - { keypress: 'gr', action: 'goToRoot' }
+  - { keypress: '/', action: 'enterFindMode' }
+  - { keypress: 'n', action: 'performFind' }
+  - { keypress: 'N', action: 'performBackwardsFind' }
+  - { keypress: 'x', action: 'removeTab' }
+  - { keypress: 'yt', action: 'duplicateTab' }
+  - { keypress: '<', action: 'moveTabLeft' }
+  - { keypress: '>', action: 'moveTabRight' }
+  - { keypress: 'X', action: 'restoreTab' }
+  - { keypress: 'f', action: 'LinkHints.activateMode' }
+  - { keypress: 'F', action: 'LinkHints.activateModeToOpenInNewForegroundTab' }
+  - { keypress: 'yy', action: 'copyCurrentUrl' }
 
