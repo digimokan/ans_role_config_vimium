@@ -1,0 +1,14 @@
+# NOTE: see hints for current default Vimium settings
+#   https://github.com/philc/vimium/blob/bdf654aebe6f570f427c5f7bc9592cad86e642b5/lib/settings.js#L176
+
+- name: "Add vimium config file, at '{{ vimium_config_file_path }}'"
+  ansible.builtin.template:
+    dest: "{{ vimium_config_file_path }}"
+    src: 'vimium_config.j2'
+    owner: 'root'
+    mode: '644'
+    force: yes
+  become: true
+  become_user: root
+  notify: warn-vimium-manual-config
+

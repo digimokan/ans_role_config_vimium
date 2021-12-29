@@ -1,0 +1,10 @@
+# List of browser search providers, along with their hotkeys and search strings
+# The first search provider in the list will be the default search provider
+vimium_search_providers:
+  - { provider_name: 'DuckDuckGo', hotkeys: 'd', search_url: 'https://duckduckgo.com/?q=%s' }
+  - { provider_name: 'Google', hotkeys: 'g', search_url: 'https://www.google.com/search?hl=en&q=%s' }
+  - { provider_name: 'Wikipedia', hotkeys: 'w', search_url: 'https://en.wikipedia.org/?search=%s' }
+
+# vimium extension config file (see install limitations noted in config file)
+vimium_config_file_path: '/etc/chromium/ansible_vimium.json'
+
